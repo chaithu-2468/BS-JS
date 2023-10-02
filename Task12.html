@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .login-container {
+            width: 400px;
+            margin: 0 auto;
+            margin-top: 100px;
+            text-align: center;
+            background-color: rgb(225, 223, 223);
+            border-radius: 8px;
+            padding-top: 15px;
+            padding-bottom: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .login-icon {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            border: 0px;
+            height: 30px;
+            outline: none;
+        }
+        .input-container{
+              display: flex;
+              justify-content: space-between;
+              background-color: white;
+              height: 40px;
+              width: 250px;
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+              margin-bottom: 30px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-container{
+            width: 30px;
+          padding-top:10px;
+            background-color:rgb(177, 176, 176);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        button{
+            background-color: blue;
+            border: 0px;
+            text-align: center;
+            color: white;
+            width: 250px;
+            height: 40px;
+            font-family: "Roboto";
+            font-size: 15px;
+        }
+        label{
+            font-size: 15px;
+        }
+        .label-cont{
+            display: flex;
+            width: 250px;
+            justify-content: space-between;
+            margin: 15px;
+        }
+        .label-cont input{
+            margin:0px;
+        }
+        a{
+            font-size: 14px;
+            text-decoration: none;
+        }
+        p{
+            text-align: center;
+        }
+        span{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Instagram</h2>
+        <form id="login-form">
+            <div class="input-container">
+                <div class="image-container">
+                    <div>
+                        <img class="login-icon" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Username Icon" width="20" height="20">
+                    </div>
+                    
+                </div>
+                <div>
+                    <input type="text" id="username" name="username" placeholder="Username" required> 
+                </div>
+               
+            </div>
+            <div class="input-container">
+                <div class="image-container">
+                    <div>
+                        <img class="login-icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828471.png" alt="Lock Icon" width="20" height="20">
+                    </div>
+                    
+                </div>
+                <div>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required> 
+                </div>
+              
+            </div>
+            <button type="submit">Log in</button>
+            <div class="label-cont">
+                <input type="checkbox" id="remember-me" name="remember-me"> 
+                <label for="remember-me"> Remember Me</label>
+                <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+            
+            
+            
+           <br><br>
+        </form>
+      
+    </div>
+
+    <p> Don't have an account !<span> Sign up here </span></p>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            
+            // Replace these with your actual username and password
+            const validUsername = "your_username";
+            const validPassword = "your_password";
+            
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            if (username === validUsername && password === validPassword) {
+                alert("Login successful!");
+                // You can redirect the user to another page or perform additional actions here.
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

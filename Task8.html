@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter string:
+    <input type="text" id="no">
+    <button onclick="sortString()">Sorted</button>
+    <p>Expected output:</p>
+    <p id="para"></p>
+    <script>
+        function sortString() {
+            let para = document.getElementById("para");
+            const inputElement = document.getElementById("no").value;
+            const reversedString = reverseString(inputElement);
+            para.textContent = reversedString;
+        }
+    
+        function reverseString(str) {
+            return str.split('').sort().join('');
+        }
+    
+    </script>
+</body>
+</html>

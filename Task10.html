@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="submit" value="show date" onclick="showDate()"> 
+   <p id="date"></p>
+   <input type="submit" value="show time" onclick="showTime()">
+   <p id="time"></p>
+   <script>
+    function showDate(){
+        let date = document.getElementById("date");
+        const now = new Date();
+        const result =  now.toDateString();
+        date.textContent = result;
+    }
+    function showTime(){
+        let time = document.getElementById("time");
+        const now = new Date();
+        const result =  now.toLocaleTimeString();
+        time.textContent = result;
+    }
+   </script>
+</body>
+
+</html>
